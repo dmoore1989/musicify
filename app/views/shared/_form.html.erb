@@ -6,7 +6,7 @@
 <% end %>
 <% element.attribute_names.each do |attr| %>
   <label for="<%= element.model_name.singular %>_<%= attr %>"><%= attr.capitalize %></label>
-  <%= for_type %>
+  <%= form_type %>
 
 <% end %>
 

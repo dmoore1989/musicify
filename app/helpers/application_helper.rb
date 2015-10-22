@@ -27,8 +27,9 @@ module ApplicationHelper
     if attr == "format" || attr == "settings"
 
     elsif attr.is_a?(String) && attr.ends_with("id")
-
-
+      <<-HTML.html_safe
+        <%  %>
+      HTML
     end
   end
 end
