@@ -4,9 +4,10 @@
 <% if params["action"] == "edit" %>
   <input type="hidden" name="_method" value="put">
 <% end %>
-
 <% element.attribute_names.each do |attr| %>
- <%= attr %><br>
+  <label for="<%= element.model_name.singular %>_<%= attr %>"><%= attr.capitalize %></label>
+  <%= for_type %>
+
 <% end %>
 
 </form>

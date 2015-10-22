@@ -22,4 +22,13 @@ module ApplicationHelper
       </form>
     HTML
   end
+
+  def form_type(attr)
+    if attr == "format" || attr == "settings"
+
+    elsif attr.is_a?(String) && attr.ends_with("id")
+
+
+    end
+  end
 end
