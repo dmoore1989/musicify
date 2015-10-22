@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
     if @user
       log_in!(@user)
-      redirect_to user_url(@user.id)
+      redirect_to bands_url
     else
       flash[:erorrs] = ["Invalid username or password"]
       redirect_to new_session_url

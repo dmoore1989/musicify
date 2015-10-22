@@ -1,4 +1,6 @@
 class AlbumsController < ApplicationController
+  before_action :log_in
+
   def new
     @album = Album.new
     render :new
