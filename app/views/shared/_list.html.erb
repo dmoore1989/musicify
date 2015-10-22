@@ -6,4 +6,8 @@
   <% end %>
 <br>
 <br>
-<a href="<%=elements.model_name.plural%>/new">Create a new <%= elements.model_name.human %></a>
+<% if params['action'] == 'index' %>
+  <a href="<%= new_band_url %>">Create a new band</a>
+<% else %>
+  <a href="<%=elements.model_name.plural%>/new">Create a new <%= elements.model_name.human %></a>
+<% end %>

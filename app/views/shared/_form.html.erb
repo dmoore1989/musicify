@@ -1,0 +1,12 @@
+<h1>Add a <%= element.model_name.human %></h1>
+
+<form action="/<%= element.model_name.plural %>" method="post">
+<% if params["action"] == "edit" %>
+  <input type="hidden" name="_method" value="put">
+<% end %>
+
+<% element.attribute_names.each do |attr| %>
+ <%= attr %><br>
+<% end %>
+
+</form>
