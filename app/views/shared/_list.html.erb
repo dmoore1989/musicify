@@ -1,7 +1,7 @@
 <h4> <%= elements.model_name.human%> Names</h4>
 
   <% elements.each do |element| %>
-    <a href="<%="#{element.model_name.plural}/#{element.id}" %>"><%= element.name %></a>
+    <a href="/<%= url_name %>/<%= element.id %>"><%= element.name %></a>
     <br>
   <% end %>
 <br>

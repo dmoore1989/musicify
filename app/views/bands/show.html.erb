@@ -1,3 +1,5 @@
-<h1>@band.name</h1>
+<h1><%= @band.name %></h1>
 
-<%= render 'shared/list', elements: @band.albums %>
+<%= render 'shared/list', elements: @band.albums, url_name: "albums" %>
+
+| <a href="<%= bands_url %>">Return to Band List</a>

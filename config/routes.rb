@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :albums, except: [:index]
   resources :tracks, except: [:index]
 
+
 end

@@ -1,0 +1,5 @@
+<h1><%= @album.name %></h1>
+
+<%= render 'shared/list', elements: @album.tracks, url_name: "tracks"  %>
+| <a href="<%= band_url(@album.band_id) %>">Return to Album list</a>
+<%= delete_item(@album) %>

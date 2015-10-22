@@ -42,7 +42,7 @@ class AlbumsController < ApplicationController
     album = Album.find(params[:id])
     band_id = album.band_id
     album.destroy
-    flash[:notice] = ["Deleted #{@album.name}"]
+    flash[:notice] = ["Deleted #{album.name}"]
     redirect_to band_url(band_id)
   end
 
