@@ -8,12 +8,12 @@
 
 <%= yield %>
 
-<% if logged_in %>
+<% if logged_in? %>
   <form action="<%=session_url%>" method="post"
     <input type="hidden" name="_method" value="delete">
     <%= auth_token %>
 
-    <input type="submit" value="Log out!%>"
+    <input type="submit" value="Log out!"
   </form>
 <% end %>
 </body>
