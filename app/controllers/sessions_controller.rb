@@ -9,16 +9,16 @@ class SessionsController < ApplicationController
     @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
 
     if @user
-      log_in_user!(@user)
-      redirect_to user_url
+      log_in!(@user)
+      redirect_to user_url(@user.id)
     else
-      flash[:erorrs] = @user.errors.full_messages
+      flash[:erorrs] = ["Invalid username or password"]
       redirect_to new_session_url
     end
   end
 
   def destroy
-    current_user.reset_session_token
+    current_user.reset_session_token!
     session[:token] = nil
     redirect_to new_session_url
   end
